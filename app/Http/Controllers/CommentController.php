@@ -15,7 +15,8 @@ class CommentController extends Controller
     public function index()
     {
         $comments = Comment::all();
-        return $comments;
+        //return view("ShowComments", ['comments' => $comments]);
+        return view ("ShowComments", compact('comments'));
     }
 
     /**
@@ -25,7 +26,7 @@ class CommentController extends Controller
      */
     public function create()
     {
-        //
+        return view("CreateComment");
     }
 
     /**
@@ -36,7 +37,8 @@ class CommentController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //add validation
+        return view("CreatedComment", compact("request"));
     }
 
     /**

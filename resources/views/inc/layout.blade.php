@@ -35,7 +35,10 @@
         </div>
     </div>
 </div>
+<div class="container">
+    <br>
     @yield("page")
+</div>
 </body>
 
 </html>
