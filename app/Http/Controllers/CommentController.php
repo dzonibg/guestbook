@@ -16,7 +16,7 @@ class CommentController extends Controller
     {
         $comments = Comment::all();
         //return view("ShowComments", ['comments' => $comments]);
-        return view ("ShowComments", compact('comments'));
+        return view("ShowComments", compact('comments'));
     }
 
     /**
@@ -37,7 +37,6 @@ class CommentController extends Controller
      */
     public function store(Request $request)
     {
-        //add validation
         return view("CreatedComment", compact("request"));
     }
 
@@ -60,7 +59,7 @@ class CommentController extends Controller
      */
     public function edit(Comment $comment)
     {
-        //
+        return view("EditComment", compact($comment));
     }
 
     /**
