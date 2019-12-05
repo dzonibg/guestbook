@@ -4,7 +4,7 @@
     <div class="col-md-12">
         <div class="panel panel-default">
             <div class="panel-heading">
-                <h3 class="panel-title">{{$comment->name}}</h3>
+                <h3 class="panel-title">{{$comment->name}} - {{$comment->updated_at}}</h3>
             </div>
             <div class="panel-body">
                 {{$comment->text}}
@@ -14,6 +14,7 @@
                       @method("DELETE")
                       @csrf
                     <button class="btn btn-primary" type="submit">Delete</button>
+                </form>
             </div>
         </div>
     </div>
