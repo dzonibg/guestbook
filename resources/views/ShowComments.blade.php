@@ -19,4 +19,8 @@
     </div>
     @endforeach
 
+    <form action="/comment/create" method="get" role="form">
+
+        <button type="submit" class="btn btn-primary">Add comment</button>
+    </form>
 @endsection
