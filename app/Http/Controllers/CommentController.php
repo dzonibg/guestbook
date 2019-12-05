@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Comment;
 use Illuminate\Http\Request;
+use function request as requestAlias;
 
 class CommentController extends Controller
 {
@@ -80,8 +81,9 @@ class CommentController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Comment  $comment
+     * @param \App\Comment $comment
      * @return \Illuminate\Http\Response
+     * @throws \Exception
      */
     public function destroy(Comment $comment)
     {
