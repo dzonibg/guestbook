@@ -37,7 +37,9 @@ class CommentController extends Controller
      */
     public function store(Request $request)
     {
+        Comment::create($this->validated());
         return view("CreatedComment", compact("request"));
+
     }
 
     /**
@@ -59,7 +61,7 @@ class CommentController extends Controller
      */
     public function edit(Comment $comment)
     {
-        return view("EditComment", compact($comment));
+        return view("EditComment", compact('comment'));
     }
 
     /**
@@ -71,7 +73,8 @@ class CommentController extends Controller
      */
     public function update(Request $request, Comment $comment)
     {
-        //
+        $comment->update($this->validated());
+        return redirect("comment");
     }
 
     /**
@@ -82,6 +85,16 @@ class CommentController extends Controller
      */
     public function destroy(Comment $comment)
     {
-        //
+        $comment->delete();
+        return redirect("comment");
+    }
+
+    protected function validated() {
+
+        return request()->validate([
+            'name' => 'required',
+            'text' => 'required'
+        ]);
+
     }
 }

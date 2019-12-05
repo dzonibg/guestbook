@@ -8,8 +8,15 @@
             </div>
             <div class="panel-body">
                 {{$comment->text}}
+
+                <p><a href="comment/{{$comment->id}}/edit">Edit comment</a></p>
+                <form method="POST" action="comment/{{$comment->id}}">
+                      @method("DELETE")
+                      @csrf
+                    <button class="btn btn-primary" type="submit">Delete</button>
             </div>
         </div>
     </div>
     @endforeach
+
 @endsection

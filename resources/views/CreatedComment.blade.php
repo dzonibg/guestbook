@@ -1,6 +1,7 @@
 @extends("inc.layout")
 @section("page")
-    {{$request->name}}
-    {{$request->text}}
+    <h1>Crated a new comment.</h1>
+    <p> {{$request->name}} </p>
+    <p>{{$request->text}} </p>
 
     @endsection

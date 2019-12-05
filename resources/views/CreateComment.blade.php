@@ -2,7 +2,7 @@
     @section("page")
         <form action="/comment" method="post" role="form">
             @csrf
-            <legend>New comment</legend>
+            <legend>Create New comment</legend>
 
             <div class="form-group">
                 <label for="name">Name</label>

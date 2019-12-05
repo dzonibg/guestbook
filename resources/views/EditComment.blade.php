@@ -1,7 +1,8 @@
 @extends("inc.layout")
 @section("page")
-    <form action="/comment" method="post" role="form">
+    <form action="/comment/{{$comment->id}}" method="post" role="form">
         @csrf
+        @method("PUT")
         <legend>New comment</legend>
 
         <div class="form-group">
