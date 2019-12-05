@@ -7,11 +7,11 @@
 
         <div class="form-group">
             <label for="name">Name</label>
-            <input type="text" class="form-control" name="name" id="name" value="{{$comment->name}}">
+            <input type="text" class="form-control" name="name" id="name" value="{{$comment->name}}" required>
         </div>
         <div class="form-group">
             <label for="text">Comment</label>
-            <input type="text" class="form-control" name="text" id="text" value="{{$comment->text}}">
+            <input type="text" class="form-control" name="text" id="text" value="{{$comment->text}}" required>
         </div>
 
 

@@ -6,11 +6,11 @@
 
             <div class="form-group">
                 <label for="name">Name</label>
-                <input type="text" class="form-control" name="name" id="name" placeholder="Your name">
+                <input type="text" class="form-control" name="name" id="name" placeholder="Your name" required>
             </div>
             <div class="form-group">
                 <label for="text">Comment</label>
-                    <input type="text" class="form-control" name="text" id="text" placeholder="Enter your comment here.">
+                    <input type="text" class="form-control" name="text" id="text" placeholder="Enter your comment here." required>
             </div>
 
 
