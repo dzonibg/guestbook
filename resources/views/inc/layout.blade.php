@@ -21,14 +21,14 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#"><span>Laravel Guestbook</span></a>
+            <a class="navbar-brand" href="/"><span>Laravel Guestbook</span></a>
         </div>
         <div class="collapse navbar-collapse" id="navbar-ex-collapse">
             <ul class="nav navbar-nav navbar-right">
-                <li class="active">
+                <li class="{{ request()->is('/') ? 'active' : '' }}">
                     <a href="/">Home</a>
                 </li>
-                <li>
+                <li class="{{ request()->is('comment*') ? 'active' : '' }}">
                     <a href="/comment">Comments</a>
                 </li>
             </ul>
