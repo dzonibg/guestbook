@@ -8,6 +8,8 @@
 </p>
 
 ## Presents a simple CRUD with the following controller:
+
+```
 <?php
 
 namespace App\Http\Controllers;
@@ -110,3 +112,4 @@ class CommentController extends Controller
 
     }
 }
+```
